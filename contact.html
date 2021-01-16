@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,140 +12,66 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-    <title>Main-page</title>
+    <title>RENTOR</title>
+    <style>
+#contact-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.img{
+width: 50%;
+}
+.contact-details{
+  font-size: 1rem;
+ margin: 60px auto;
+
+}
+
+@media(max-width: 500px){
+  .img{
+width: 100%;
+height: auto;
+}
+}
+    </style>
   </head>
   <body>
-    
-<div class="menu">    
-<button id="btn">≡</button>
+    <div class="menu">    
+      <button id="btn">≡</button>
 <nav id="nav">
   <div id="menu-head">
-   Rentor
+    Rentor
   </div>
   <hr>
-    <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="about.html" >About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-
-    </ul>
-    
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" >About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 </div>
 
 
-  
-  <div class="bg-image"></div>
-
-<div class="bg-text">
-  <div class="container1">
-    <p> <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+<div class="container" id="contact-container">
+  <div class="img">
+      <img src="static/contact.png" alt="">
   </div>
-</div>
+ <div class="contact-details">
+<p class="mx-4">
+  <h1 class="h1">Contact Us</h1>
+  <hr>
+ <i class="fa fa-envelope" aria-hidden="true">  Email: xyz@gmail.com</i> <br>
+ <i class="fa fa-phone"> Phone No.: +91 88888 888888</i> <br>
+  <i class="fa fa-whatsapp"></i> WhatsApp No.: +91 88888 88880 <br>
+ <i class="fa fa-twitter"></i> Twitter: Rentor@here <br>
+ <i class="fa fa-instagram"></i> Instagram: _Rentor_<br>
+</p>
 
 
-<div class="head mt-4">
-<div class="heading">
-  <h1 class="h1 m-4">Properties available</h1>
-</div>
-
-<div class="wrapper">
-  <div class="search-input">
-    <input type="text" placeholder="Search area/College..">
-    <div class="icon"><i class="fa fa-search"></i></div>
+ </div> 
   </div>
-</div>
-</div>
-
-<div class="gallery container">
-  <div class="card" style="width: 20rem;">
-    <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="card-img-top" alt="...">
-    <div class="card-body ">
-      <h5 class="card-title">Rent 2500/-</h5>
-      <p class="card-text">Yadnesh<br><span class="area"> Ram meghe</span><br> Ocupancy. </p>
-      <a href="#" class="btn mt-2">View more</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 20rem;">
-    <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Rent 2000/-</h5>
-      <p class="card-text">Owner's name.<br><span class="area"> Gopal Nagar</span><br> Ocupancy. </p>
-      <a href="#" class="btn mt-2">View more</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 20rem;">
-    <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Rent 1500/-</h5>
-      <p class="card-text">Owner's name.<br><span class="area">Ram meghe</span><br> Ocupancy. </p>
-      <a href="#" class="btn mt-2">View more</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 20rem;">
-    <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Rent 5000/-</h5>
-      <p class="card-text">Owner's name.<br><span class="area"> Sipna of the house.</span><br> Ocupancy. </p>
-      <a href="#" class="btn mt-2">View more</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 20rem;">
-    <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Rent 2050/-</h5>
-      <p class="card-text">Owner's name.<br><span class="area"> Sipna</span><br> Ocupancy. </p>
-      <a href="#" class="btn mt-2">View more</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 20rem;">
-    <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Rent 2000/-</h5>
-      <p class="card-text">Owner's name.<br><span class="area"> Juni Basti</span><br> Ocupancy. </p>
-      <a href="#" class="btn mt-2">View more</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 20rem;">
-    <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Rent 2000/-</h5>
-      <p class="card-text">Owner's name.<br><span class="area"> Sai Nagar</span><br> Ocupancy. </p>
-      <a href="#" class="btn mt-2">View more</a>
-    </div>
-  </div>
-
-  <div class="card" style="width: 20rem;">
-    <img src="https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Rent 1000/-</h5>
-      <p class="card-text">Tayade<br><span class="area"> Dastur Nagar</span><br> Ocupancy. </p>
-      <a href="#" class="btn mt-2 ">View more</a>
-    </div>
-  </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -252,3 +179,6 @@
     -->
   </body>
 </html>
+
+
+
