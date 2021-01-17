@@ -52,14 +52,35 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
 
 
 
+// PAGINATION FUNCTIONALITY CODE
+const firstPage = document.getElementById('page1');
+const secondPage = document.getElementById('page2');
+
+
+function page1(){
+  firstPage.style.display='flex';
+  secondPage.style.display = 'none';
+}
+
+
+function page2(){
+  firstPage.style.display = 'none';
+  secondPage.style.display ='flex';
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 // searchbar
-
-// let suggestions = [
-//   "Badnera","PRMIT&R","Raisoni","Sipna","Sai Nagar","pote college","Address"
-// ]
-
 
 // getting all required elements
 const gallery = document.getElementsByClassName('gallery')
@@ -68,59 +89,31 @@ const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("input");
 const suggBox = searchWrapper.querySelector(".autocom-box");
 const icon = searchWrapper.querySelector(".icon");
-let linkTag = searchWrapper.querySelector("a");
-let webLink;
+// let linkTag = searchWrapper.querySelector("a");
+// let webLink;
 const card = document.getElementsByClassName('card');
 // console.log(card[0].innerHTML)
 // if user press any key and release
 
 inputBox.onkeyup = (e)=>{
     let userData = e.target.value; //user enetered data
-    let emptyArray = [];
     if(userData){
         inputBox.onkeyup = ()=>{
           for(i=0;i<card.length;i++){
             if(card[i].innerText.toLocaleLowerCase().indexOf(inputBox.value.toLocaleLowerCase())> -1){
               card[i].style.display = 'block';
+              secondPage.style.display='flex';
             }
             else{
               card[i].style.display = 'none';
             }
           }
+          if(inputBox.value==""){
+            secondPage.style.display = 'none';
+          }
         }
-        emptyArray = suggestions.filter((data)=>{
-          //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
-          return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase()); 
-        });
-        emptyArray = emptyArray.map((data)=>{
-          // passing return data inside li tag
-          return data = '<li>'+ data +'</li>';
-        });
-        // searchWrapper.classList.add("active"); //show autocomplete box
-        showSuggestions(emptyArray);
-        let allList = suggBox.querySelectorAll("li");
-        for (let i = 0; i < allList.length; i++) {
-          //adding onclick attribute in all li tag
-          // allList[i].setAttribute("onclick", "select(this)");
-        }
-      }else{
-        // searchWrapper.classList.remove("active"); //hide autocomplete box
-      }
-    }
-    function select(element){
-    let selectData = element.textContent;
-    inputBox.value = selectData;
-    icon.onclick = ()=>{
-      for(i=0;i<card.length;i++){
-        if(card[i].innerText.toLocaleLowerCase().indexOf(inputBox.value.toLocaleLowerCase())> -1){
-          card[i].style.display = 'block';
-          // flag = 1
-        }
-        else{
-          card[i].style.display = 'none';
-        }
-      
-    }
-    searchWrapper.classList.remove("active");
-}
-}
+        
+            }
+           
+              
+          }
